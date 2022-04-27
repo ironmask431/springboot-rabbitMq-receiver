@@ -27,7 +27,7 @@ public class ReceiverModule {
             key = "deptDto-1" //sender 에서 보낸 routing key 값
     ))
     @SendTo("deptDto/deptDto-3") //수신받은 후 다시 리턴전송하기
-    //exchange = deptDto, key = deptDto-third
+    //exchange는 deptDto, key는 deptDto-third 를 의미함.
     public DeptDto receiver2(DeptDto deptDto){
         System.out.println("<== 2.[수신]receiver deptDto : "+ deptDto.toString());
         deptDto.setDeptNo(2);
